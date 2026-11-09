@@ -1,0 +1,10 @@
+# .github/workflows/hello.yml
+name: Hello
+on: [push, workflow_dispatch]
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: echo "Bonjour depuis $RUNNER_OS"
+      - run: ls -la
